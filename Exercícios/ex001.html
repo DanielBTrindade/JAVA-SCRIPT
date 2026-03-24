@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Idade</title>
+</head>
+<body>
+    <script>
+        const anoAtual = window.prompt('Qual o ano atual?');
+        const anoNasc = window.prompt('Em que ano você nasceu?');
+        const idade = Number(anoAtual) - Number(anoNasc);
+        if (isNaN(idade)) {
+            window.alert('Por favor, insira um número válido para o ano.');
+        } else if (idade < 0) {
+            window.alert('O ano de nascimento não pode ser maior que o ano atual.');
+        } else {
+            window.alert(`Você tem ${idade} anos.`);
+        }
+    </script>
+</body>
+</html>

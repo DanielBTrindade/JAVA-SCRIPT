@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcular gorjeta</title>
+</head>
+<body>
+    <script>
+        let conta = window.prompt('Qual o valor da conta?');
+        let porcentagem = window.prompt('Qual a porcentagem da taxa?')
+        let contaLimpo = Number(conta.replace(',', '.'));
+        let porcentagemLimpo = Number(porcentagem.replace(',','.'));
+
+        let taxa = contaLimpo * (porcentagemLimpo / 100);
+
+        let total = contaLimpo + taxa;
+        
+        window.alert(`O valor da sua conta foi de ${total}, com ${porcentagem}% de acrécimo para o garçom!`);
+    </script>
+</body>
+</html>
