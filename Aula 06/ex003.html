@@ -19,8 +19,10 @@
     <script>
         var n1 = window.prompt('Digite um número:');
         var n2 = window.prompt('Digite outro número:');
-        var s = Number(n1) + Number(n2);
-        window.alert('A soma entre ' + n1 + ' e ' + n2 + ' é igual a ' + s);
+        var valor = n1.replace(',', '.');// Substitui a vírgula por ponto para garantir que seja interpretado como número decimal
+        var valor2 = n2.replace(',', '.');
+        var s = Number(valor) + Number(valor2);// Converte as strings para números antes de realizar a soma
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`);
     </script>
 </body>
 </html>

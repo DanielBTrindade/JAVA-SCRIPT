@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JavaScript</title>
+    <style>
+        body {
+            font: normal 20px Arial, sans-serif; /* Define a fonte do texto para Arial, com tamanho 20px. */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = prompt("Digite seu nome:");
+        document.writeln(`Seu nome tem ${nome.length} letras.`);// O método length retorna o número de caracteres em uma string.
+        document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}.`);// O método toUpperCase() converte uma string para letras maiúsculas.
+        document.writeln(`Seu nome em minúsculas é ${nome.toLowerCase()}.`);// O método toLowerCase() converte uma string para letras minúsculas.
+    </script>
+</body>
+</html>
