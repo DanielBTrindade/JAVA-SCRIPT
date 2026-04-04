@@ -3,19 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 09</title>
+    <title>Aula 09 - Estudos de DOM</title>
     <style>
         body {
             background: rgba(20, 10, 112, 0.553);
             color: white;
-            font: normal 18px;
+            /* Defini a família da fonte (sans-serif) para o navegador aplicar o tamanho corretamente */
+            font: normal 18px sans-serif;
         }
     </style>
 </head>
 <body>
     <h1>Iniciando estudos em DOM</h1>
     <p>Aqui vai o resultado</p>
-    <p>Apendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        /* 1. Seleção por Marcador (Tag):
+           Aqui pegamos o primeiro parágrafo [0] da página. 
+        */
+        var p1 = window.document.getElementsByTagName('p')[0]
+        
+        // Escreve diretamente na tela o texto contido dentro da tag <p>
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        
+        // Altera a cor do texto do elemento selecionado para azul
+        p1.style.color = 'blue'
+
+        /* 2. Seleção por ID (Antiga):
+           Abaixo está o exemplo comentado de como selecionar pelo ID 'msg'
+           var d = window.document.getElementById('msg')
+           d.style.background = 'green'
+        */
+
+        /* 3. Seleção por Seletor CSS (Moderna):
+           O querySelector é muito potente. O '#' indica que estamos buscando um ID.
+           'div#msg' significa: procure a <div> que tenha o ID 'msg'.
+        */
+        var d = document.querySelector('div#msg')
+        
+        // Altera a cor de fundo (background) do elemento selecionado para vermelho
+        d.style.background = 'red'
+        
+        /*
+           DICA DE ESTUDO:
+           - innerText: pega apenas o texto puro.
+           - innerHTML: pega o texto e interpreta as tags HTML (como <strong>).
+           - style: permite alterar qualquer propriedade CSS via JS.
+        */
+    </script>
 </body>
 </html>
