@@ -12,15 +12,18 @@
 
     </div>
     <script>
-        function verificar(){
+        function verificar() {
             var txtv = document.querySelector('input#txtpais');
             var res = document.querySelector('div#res');
-            var pais = txtv.value; // Captura o texto digitado
-            res.innerHTML = `<p>Seu País é ${pais}!</p>`
-            if (pais.toLowerCase() === 'Brasil') {
+            var pais = txtv.value; 
+
+            res.innerHTML = `<p>Seu País é <strong>${pais}</strong>!</p>`;
+
+            // Comparamos com 'brasil' tudo em minúsculo
+            if (pais.toLowerCase() === 'brasil') {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`;
+            } else {
                 res.innerHTML += `<p>Você é Estrangeiro!</p>`;
-            }else{
-                res.innerHTML +=`<p>Você é Brasileiro.</p>`;
             }
         }   
     </script>
