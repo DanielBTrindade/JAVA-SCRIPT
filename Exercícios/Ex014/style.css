@@ -1,13 +1,17 @@
 
 body {
-    background: rgba(49, 179, 215, 0.861);
-    font: normal 15pt arial;
+    font-family: 'Poppins', sans-serif;
 }
+
 header {
-    background: red;
     color: white;
     text-align: center;
 }
+header h1 {
+    font-weight: 700; /* Deixa o título mais gordinho */
+    letter-spacing: -1px; /* Aproxima um pouco as letras para um ar moderno */
+}
+
 section {
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -15,6 +19,22 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+}
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: cover;  
+    margin-top: 10px;
+}
+div{
+    text-align: center;
+    padding: 8px;
+}
+div#msg {
+    font-family: 'Courier New', Courier, monospace; /* Ou uma fonte digital */
+    font-weight: bold;
+    font-size: 1.4em;
 }
 footer {
     color: white;
